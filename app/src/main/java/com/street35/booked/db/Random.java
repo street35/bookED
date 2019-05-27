@@ -1,4 +1,4 @@
-package com.example.street35.booked.db;
+package com.street35.booked.db;
 
 public class Random {
 }
