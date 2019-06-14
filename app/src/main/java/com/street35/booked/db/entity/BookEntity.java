@@ -2,7 +2,9 @@ package com.street35.booked.db.entity;
 
 import com.street35.booked.model.Book;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class BookEntity implements Book {
 
@@ -10,13 +12,13 @@ public class BookEntity implements Book {
     private long userId;
     private String title;
     private String publisher;
-    private String author;
-    private String condition;
+    List<String> author = new ArrayList<>() ;
     private String isbn;
     private boolean isExchange;
     private String imageUrl;
     private Date postedAt;
     private Date updatedAt;
+    BookCondition bookCondition;
 
     public long getId() {
         return id;
@@ -48,22 +50,6 @@ public class BookEntity implements Book {
 
     public void setPublisher(String publisher) {
         this.publisher = publisher;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
     }
 
     public String getIsbn() {
@@ -106,20 +92,20 @@ public class BookEntity implements Book {
         this.updatedAt = updatedAt;
     }
 
-    @Override
-    public String toString() {
-        return "BookEntity{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", title='" + title + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", author='" + author + '\'' +
-                ", condition='" + condition + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", isExchange=" + isExchange +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", postedAt=" + postedAt +
-                ", updatedAt=" + updatedAt +
-                '}';
+    public List<String> getAuthor() {
+        return author;
     }
+
+    public void setAuthor(List<String> author) {
+        this.author = author;
+    }
+
+    public BookCondition getBookCondition() {
+        return bookCondition;
+    }
+
+    public void setBookCondition(BookCondition bookCondition) {
+        this.bookCondition = bookCondition;
+    }
+
 }
