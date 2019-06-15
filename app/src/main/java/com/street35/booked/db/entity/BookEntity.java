@@ -108,4 +108,5 @@ public class BookEntity implements Book {
         this.bookCondition = bookCondition;
     }
 
+
 }

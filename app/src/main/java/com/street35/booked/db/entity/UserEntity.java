@@ -8,10 +8,11 @@ public class UserEntity implements User {
     private String firstName;
     private String lastName;
     private String email;
+    //TODO: Can be removed later
     private String password;
-    private String address;
     private int age;
     private char sex;
+    UserAddress userAddress;
 
     public long getUserId() {
         return userId;
@@ -51,14 +52,6 @@ public class UserEntity implements User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public int getAge() {
