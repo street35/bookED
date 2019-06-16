@@ -1,4 +1,4 @@
-package com.example.street35.booked;
+package com.street35.booked;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
