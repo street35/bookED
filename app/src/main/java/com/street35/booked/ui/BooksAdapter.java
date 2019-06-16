@@ -19,7 +19,7 @@ public class BooksAdapter extends ArrayAdapter<Book> {
 
     public BooksAdapter(@NonNull Context context, int resource, @NonNull List<Book> objects) {
         super(context, resource, objects);
-        context = bookContext;
-        objects = bookList;
+        this.bookContext = context;
+        this.bookList = objects;
     }
 }

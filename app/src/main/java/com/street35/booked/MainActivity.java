@@ -12,9 +12,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mTextMessage;
     AllBooks allBooksFragment = new AllBooks();
-    FragmentManager fm = getSupportFragmentManager();
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 

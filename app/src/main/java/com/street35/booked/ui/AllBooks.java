@@ -22,7 +22,6 @@ public class AllBooks extends Fragment {
     private AllBooksViewModel mViewModel;
 
     public static AllBooks newInstance() {
-        Log.d("ERROR", "Oppppsssieeeeeeeeeeeeeeeeeeeeee");
         return new AllBooks();
     }
 
