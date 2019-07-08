@@ -1,8 +1,8 @@
 package com.street35.booked.db.entity;
 
-import com.street35.booked.model.User;
+import com.street35.booked.model.IUser;
 
-public class UserEntity implements User {
+public class UserEntity implements IUser {
 
     private long userId;
     private String firstName;

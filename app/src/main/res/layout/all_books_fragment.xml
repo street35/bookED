@@ -8,6 +8,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="All Books" />
+        android:text="@string/title_home" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        tools:listitem="@layout/bookslistitem">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

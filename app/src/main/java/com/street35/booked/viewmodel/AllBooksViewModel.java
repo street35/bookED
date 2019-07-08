@@ -1,20 +1,21 @@
 package com.street35.booked.viewmodel;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.street35.booked.model.Book;
+import com.street35.booked.db.entity.BookEntity;
+import com.street35.booked.model.IBook;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllBooksViewModel extends ViewModel {
     // TODO: Implement the ViewModel
-    private MutableLiveData<List<Book>> books;
+    private MutableLiveData<ArrayList<BookEntity>> books;
 
-    public MutableLiveData<List<Book>> getBooks() {
+    public MutableLiveData<ArrayList<BookEntity>> getBooks() {
         if(books == null) {
-            books = new MutableLiveData<List<Book>>();
+            books = new MutableLiveData<ArrayList<BookEntity>>();
             loadBooks();
         }
         return books;
@@ -22,5 +23,10 @@ public class AllBooksViewModel extends ViewModel {
 
     private void loadBooks() {
         // Asynchronous operation to fetch users
+    }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
     }
 }

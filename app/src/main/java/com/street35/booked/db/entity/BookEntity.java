@@ -1,12 +1,12 @@
 package com.street35.booked.db.entity;
 
-import com.street35.booked.model.Book;
+import com.street35.booked.model.IBook;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BookEntity implements Book {
+public class BookEntity implements IBook {
 
     private long id;
     private long userId;
