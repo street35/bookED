@@ -34,9 +34,10 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
     @Override
     public void onBindViewHolder(@NonNull BooksViewHolder holder, int position) {
         //set data
+
         BookEntity bookEntity = bookEntities.get(position);
-        holder.textViewTitle.setText("YO");
-        holder.textViewDescription.setText("Hulp");
+        holder.textViewTitle.setText(bookEntity.getTitle());
+        holder.textViewDescription.setText(bookEntity.getPublisher());
     }
 
     @Override
@@ -56,8 +57,8 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
 
         BooksViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewTitle = itemView.findViewById(R.id.text);
-            textViewTitle = itemView.findViewById(R.id.text2);
+            textViewTitle = (TextView) itemView.findViewById(R.id.text);
+            textViewDescription = (TextView) itemView.findViewById(R.id.text2);
         }
     }
 }

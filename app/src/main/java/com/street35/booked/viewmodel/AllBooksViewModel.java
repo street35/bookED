@@ -23,6 +23,16 @@ public class AllBooksViewModel extends ViewModel {
 
     private void loadBooks() {
         // Asynchronous operation to fetch users
+
+        ArrayList<BookEntity> arrayList = new ArrayList<>();
+        BookEntity bookEntity = new BookEntity();
+        bookEntity.setTitle("Hello");
+        bookEntity.setPublisher("Moto");
+        bookEntity.setIsbn("123");
+
+        arrayList.add(bookEntity);
+        books.setValue(arrayList);
+
     }
 
     @Override
